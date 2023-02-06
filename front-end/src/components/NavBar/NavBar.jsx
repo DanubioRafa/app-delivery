@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-// import getUserLocalStorage from '../utils/userLocalStorage';
+import { useHistory } from 'react-router-dom';
 import './NavBar.css';
 
 export default function NavBar() {
@@ -14,7 +13,7 @@ export default function NavBar() {
 
   const nameTag = (
     <p
-      className="a-navbar"
+      className="user-name"
       data-testid="customer_products__element-navbar-user-full-name"
     >
       { user.name }
@@ -34,50 +33,72 @@ export default function NavBar() {
   if (user.role === 'customer') {
     return (
       <div className="navbar">
-        <Link
-          to="/customer/products"
-          data-testid="customer_products__element-navbar-link-products"
-          className="a-navbar"
-        >
-          Produtos
-        </Link>
-        <Link
-          to="/customer/orders"
-          data-testid="customer_products__element-navbar-link-orders"
-          className="a-navbar"
-        >
-          Meus Pedidos
-        </Link>
-        {nameTag}
-        <div className="box-logout">
-          {logoutTag}
+        <div className="links-container">
+          <button
+            type="button"
+            onClick={ () => history.push('/customer/products') }
+            data-testid="customer_products__element-navbar-link-products"
+            className="button-navbar"
+          >
+            Produtos
+          </button>
+          <button
+            type="button"
+            onClick={ () => history.push('/customer/orders') }
+            data-testid="customer_products__element-navbar-link-orders"
+            className="button-navbar"
+          >
+            Meus Pedidos
+          </button>
+        </div>
+        <div className="name-logout-container">
+          {nameTag}
+          <div className="box-logout">
+            {logoutTag}
+          </div>
         </div>
       </div>
     );
   } if (user.role === 'seller') {
     return (
-      <div>
-        <Link
-          to="/seller/orders"
-          data-testid="customer_products__element-navbar-link-orders"
-        >
-          Meus Pedidos
-        </Link>
-        {nameTag}
-        {logoutTag}
+      <div className="navbar">
+        <div className="links-container">
+          <button
+            type="button"
+            onClick={ () => history.push('/seller/orders') }
+            data-testid="customer_products__element-navbar-link-orders"
+            className="button-navbar"
+          >
+            Meus Pedidos
+          </button>
+        </div>
+        <div className="name-logout-container">
+          {nameTag}
+          <div className="box-logout">
+            {logoutTag}
+          </div>
+        </div>
       </div>
     );
   } if (user.role === 'administrator') {
     return (
-      <div>
-        <Link
-          to="/admin/manage"
-          data-testid="customer_products__element-navbar-link-orders"
-        >
-          Gerenciar Usuarios
-        </Link>
-        {nameTag}
-        {logoutTag}
+      <div className="navbar">
+        <div className="links-container">
+          <button
+            type="button"
+            onClick={ () => history.push('/admin/manage') }
+            data-testid="customer_products__element-navbar-link-orders"
+            className="button-navbar"
+          >
+            Gerenciar Usuarios
+          </button>
+        </div>
+        <div className="name-logout-container">
+          {nameTag}
+          <div className="box-logout">
+            {logoutTag}
+          </div>
+        </div>
       </div>
     );
   }
