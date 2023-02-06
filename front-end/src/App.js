@@ -3,11 +3,11 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import admin from './pages/adminPage/AdminPage';
 import Checkout from './pages/checkout/Checkout';
-import Products from './pages/Products';
+import Products from './pages/Products/Products';
 import ProductProvider from './context/productProvider';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import SellerPage from './pages/SellerPage';
-import Register from './pages/Register';
+import Register from './pages/register/Register';
 import OrderDetails from './pages/orderDetails/OrderDetails';
 import CustomerPage from './pages/CustomerPage/CustomerPage';
 
