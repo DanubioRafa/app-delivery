@@ -29,6 +29,7 @@ export default function Register() {
   const onClickSubmit = async (data) => {
     const registerVerify = await fetchUtil
       .fetchWithBody('/register', 'POST', { ...data, role: 'customer' });
+    console.log(registerVerify.message);
     if (registerVerify.message === 'conflict') {
       setError(true);
     } else {
@@ -41,14 +42,6 @@ export default function Register() {
   return (
     <div className="container-register">
       <div className="division">
-        {error
-      && (
-        <p
-          data-testid="common_register__element-invalid_register"
-          className="errorMessage"
-        >
-          Erro ao fazer cadastro
-        </p>)}
         <img
           src={ friends }
           alt="FriendsIcon"
@@ -60,7 +53,14 @@ export default function Register() {
             alt="OrangeJuiceIcon"
             className="orange-juice"
           />
-          Cadastro
+          {error
+      && (
+        <p
+          data-testid="common_register__element-invalid_register"
+          className="errorMessageRegister"
+        >
+          Erro ao fazer cadastro
+        </p>)}
           <input
             data-testid="common_register__input-name"
             type="text"

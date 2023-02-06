@@ -2,10 +2,6 @@
   width: 30vh;
 }
 
-.errorMessage {
-  color: var(--brown);
-}
-
 .container-register {
   align-items: center;
   display: flex;
@@ -24,6 +20,13 @@
   gap: 20px;
 }
 
+.errorMessageRegister {
+  color: var(--brown);
+  font-size: 16px;
+  position: absolute;
+  bottom: 56%;
+}
+
 .input {
   background-color: white;
   border-bottom: 1px solid #272727;
@@ -33,11 +36,17 @@
 }
 
 .register-button {
-  background: linear-gradient(270deg, #F28A05 69.79%, rgba(242, 138, 5, 0.5) 100%);
+  background-color: #f28a05;
   border-radius: 20px;
   color: white;
   height: 37px;
   width: 120px;
+}
+
+.register-button:disabled {
+  background-color: #f6f6f6;
+  color: rgb(140, 140, 140);
+  cursor: not-allowed;
 }
 
 @media screen and ( min-width : 600px ) {
@@ -51,7 +60,10 @@
   }
 
   .register {
-    gap: 28px;
     width: 50%;
+  }
+
+  .errorMessageRegister {
+    bottom: 60%;
   }
 }
