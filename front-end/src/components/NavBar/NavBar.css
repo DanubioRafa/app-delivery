@@ -40,3 +40,10 @@
   background-color: #162026;
   transition: 0.8s;
 }
+
+
+@media screen and (max-width: 950px) {
+  .box-logout {
+    padding-left: 5%;
+  }
+}
