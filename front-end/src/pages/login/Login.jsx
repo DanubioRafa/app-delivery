@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-max-depth */
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
@@ -46,7 +47,23 @@ export default function Login() {
   return (
     <div className="container-login">
       <div className="division">
-        {error
+        <img
+          src={ friends }
+          alt="FriendsIcon"
+          className="friends"
+        />
+        <form className="login" onSubmit={ handleSubmit(onClickSubmit) }>
+          <p className="message">
+            Suco de laranja fresquinho na sua porta
+            <br />
+            sempre na hora certa.
+          </p>
+          <img
+            src={ orangeJuice }
+            alt="OrangeJuiceIcon"
+            className="orange-juice"
+          />
+          {error
       && (
         <p
           data-testid="common_login__element-invalid-email"
@@ -54,21 +71,10 @@ export default function Login() {
         >
           Erro ao fazer login
         </p>)}
-        <img
-          src={ friends }
-          alt="FriendsIcon"
-          className="friends"
-        />
-        <form className="login" onSubmit={ handleSubmit(onClickSubmit) }>
-          <img
-            src={ orangeJuice }
-            alt="OrangeJuiceIcon"
-            className="orange-juice"
-          />
           <input
             data-testid="common_login__input-email"
             type="email"
-            placeholder="email"
+            placeholder="Email"
             className="input"
             id="email"
             { ...register('email') }
@@ -79,7 +85,7 @@ export default function Login() {
           <input
             data-testid="common_login__input-password"
             type="password"
-            placeholder="password"
+            placeholder="Password"
             className="input"
             id="password"
             { ...register('password', { min: 6 }) }
@@ -95,17 +101,23 @@ export default function Login() {
           >
             Login
           </button>
-          <Link
-            to="/register"
+          <div
+            className="register-card"
           >
-            <button
-              data-testid="common_login__button-register"
-              type="button"
-              className="button-login"
+            <span>
+              Não tem uma conta?
+            </span>
+            <Link
+              to="/register"
             >
-              Ainda não tenho conta
-            </button>
-          </Link>
+              <button
+                data-testid="common_login__button-register"
+                type="button"
+              >
+                Cadastre-se
+              </button>
+            </Link>
+          </div>
           {/* <div
             className="link-container"
           >

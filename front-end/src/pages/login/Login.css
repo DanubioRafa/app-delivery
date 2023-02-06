@@ -8,6 +8,9 @@
 
 .errorMessage {
   color: var(--brown);
+  font-size: 16px;
+  position: absolute;
+  bottom: 54%;
 }
 
 .container-login {
@@ -28,12 +31,21 @@
   gap: 20px;
 }
 
+.login .message {
+  display: none;
+}
+
 .input {
   background-color: white;
   border-bottom: 1px solid #272727;
   border-color: #272727;
+  border-radius: 0;
   opacity: 80%;
   outline: 0;
+}
+
+.input::placeholder {
+  font-weight: 500;
 }
 
 .division {
@@ -60,11 +72,36 @@
 }
 
 .button-login {
-  background: linear-gradient(270deg, #F28A05 69.79%, rgba(242, 138, 5, 0.5) 100%);
+  background-color: #f28a05;
   border-radius: 20px;
   color: white;
+  cursor: pointer;
   height: 37px;
   width: 120px;
+}
+
+.button-login:hover {
+  background-color: var(--orange-hover);
+}
+
+.register-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.register-card > span {
+  color: rgba(0, 0, 0, 0.301);
+  text-decoration: none;
+}
+
+.register-card > a > button {
+  background-color: white;
+  color: #f28a05;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 @media screen and ( min-width : 600px ) {
@@ -72,8 +109,8 @@
   .friends {
     display: block;
     height: 100%;
-    width: 50%;
     margin: 0;
+    width: 50%;
   }
 
   .container-login {
@@ -85,11 +122,34 @@
   }
 
   .login {
-    gap: 28px;
+    gap: 10px;
+    padding: 10px 0;
     width: 50%;
+  }
+
+  .login .message {
+    color: #f28a05;
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .division {
     width: 80%;
   }
+
+  .errorMessage {
+    bottom: 48%;
+  }
+
+  .register-card {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .register-card > a > button {
+    font-size: 16px;
+  }
+
 }
+
