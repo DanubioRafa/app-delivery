@@ -1,0 +1,69 @@
+.orange-juice {
+  width: 30vh;
+}
+
+.container-register {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100vw;
+}
+
+.register {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.errorMessageRegister {
+  color: var(--brown);
+  font-size: 16px;
+  position: absolute;
+  bottom: 56%;
+}
+
+.input {
+  background-color: white;
+  border-bottom: 1px solid #272727;
+  border-color: #272727;
+  opacity: 80%;
+  outline: 0;
+}
+
+.register-button {
+  background-color: #f28a05;
+  border-radius: 20px;
+  color: white;
+  height: 37px;
+  width: 120px;
+}
+
+.register-button:disabled {
+  background-color: #f6f6f6;
+  color: rgb(140, 140, 140);
+  cursor: not-allowed;
+}
+
+@media screen and ( min-width : 600px ) {
+
+  .container-register {
+    background-color: #d3d3d3;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .register {
+    width: 50%;
+  }
+
+  .errorMessageRegister {
+    bottom: 60%;
+  }
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+
+  --dark-blue: #162026;
+
+  --yellow: #f2e307;
+
+  --light-orange: #f2b90c;
+
+  --orange: #f28a05;
+
+  --orange-hover: #f5a337;
+
+  --brown: #8c2b03;
+
+  --green: #47d000;
+
+  --light-green: #7dbd61;
+}
+
+* {
+  border: 0;
+  font-family: 'Source Sans 3' , sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+h1 {
+  font-size: 2.189rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.563rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+a {
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: 0.625rem;
+}
+
+
+@media screen and ( min-width : 600px ) {
+
+  h1 {
+    font-size: 3.125rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.875rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+
+  }
+
+  a {
+    font-size: 1rem;
+
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+button {
+  cursor: pointer;
+}

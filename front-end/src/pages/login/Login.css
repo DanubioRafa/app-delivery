@@ -1,0 +1,155 @@
+.orange-juice {
+  width: 30vh;
+}
+
+.friends {
+  display: none;
+}
+
+.errorMessage {
+  color: var(--brown);
+  font-size: 16px;
+  position: absolute;
+  bottom: 54%;
+}
+
+.container-login {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100vw;
+}
+
+.login {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.login .message {
+  display: none;
+}
+
+.input {
+  background-color: white;
+  border-bottom: 1px solid #272727;
+  border-color: #272727;
+  border-radius: 0;
+  opacity: 80%;
+  outline: 0;
+}
+
+.input::placeholder {
+  font-weight: 500;
+}
+
+.division {
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.link {
+  color: var(--light-orange);
+  font-weight: 700;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.link-container {
+  align-items: baseline;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 5px;
+}
+
+.button-login {
+  background-color: #f28a05;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  height: 37px;
+  width: 120px;
+}
+
+.button-login:hover {
+  background-color: var(--orange-hover);
+}
+
+.register-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.register-card > span {
+  color: rgba(0, 0, 0, 0.301);
+  text-decoration: none;
+}
+
+.register-card > a > button {
+  background-color: white;
+  color: #f28a05;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media screen and ( min-width : 600px ) {
+
+  .friends {
+    display: block;
+    height: 100%;
+    margin: 0;
+    width: 50%;
+  }
+
+  .container-login {
+    background-color: #d3d3d3;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .login {
+    gap: 10px;
+    padding: 10px 0;
+    width: 50%;
+  }
+
+  .login .message {
+    color: #f28a05;
+    display: inline;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .division {
+    width: 80%;
+  }
+
+  .errorMessage {
+    bottom: 48%;
+  }
+
+  .register-card {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .register-card > a > button {
+    font-size: 16px;
+  }
+
+}
+

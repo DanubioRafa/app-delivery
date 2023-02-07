@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import admin from './pages/AdminPage';
-import Checkout from './pages/Checkout';
-import Products from './pages/Products';
+import admin from './pages/adminPage/AdminPage';
+import Checkout from './pages/checkout/Checkout';
+import Products from './pages/Products/Products';
 import ProductProvider from './context/productProvider';
-import Login from './pages/Login';
+import Login from './pages/login/Login';
 import SellerPage from './pages/SellerPage';
-import Register from './pages/Register';
-import OrderDetails from './pages/OrderDetails';
-import CustomerPage from './pages/CustomerPage';
+import Register from './pages/register/Register';
+import OrderDetails from './pages/orderDetails/OrderDetails';
+import CustomerPage from './pages/CustomerPage/CustomerPage';
 
 function App() {
   return (
