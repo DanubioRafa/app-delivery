@@ -1,13 +1,44 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Laranja Express - App de delivery
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Esse projeto foi desenvolvido em grupo.
+
+O objetivo deste projeto foi desenvolver um aplicativo de delivery para a distribuidora de bebidas, que agilizasse as atividades da equipe de vendas e dos clientes, permitindo o acesso via login, possibilitando o gerenciamento e atualização de status dos pedidos. É possível também através de uma conta Admin cadastrar novos usuários sejam eles vendedores ou clientes.
+
+<details><summary>Tecnologias utilizadas</summary>
+<details><summary>No Front-end</summary>
+
+- React.JS, React-Hook-Forms
+- Javascript
+- CSS
+- Jest
+- React Testing Library
+- Axios
+
+</details>
+
+<details><summary>No Back-end</summary>
+
+- Node.JS
+- Express
+- Sequelize
+- MySQL
+- JWT
+- Jest
+
+</details>
+
+**Ferramentas:** Metodologias agéis como Scrum e Kanban, Trello, Figma
+
+</details>
+
+## Destaque do projeto
+
+Primeiro grupo a entregar dentre 29 da nossa turma.
+
+<details><summary>Curiosidades</summary>
+
+**O porquê do nome:** O nome foi escolhido devido a uma piada interna da escola em que nós referimos o nome cerveja a suco de la
+
+</details>
+
